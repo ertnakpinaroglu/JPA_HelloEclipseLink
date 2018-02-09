@@ -6,6 +6,7 @@
 package _01.hello.eclipselink.dao;
 
 import _01.hello.eclipselink.model.Employee;
+import _02.field.access.model.Employee4;
 import java.util.List;
 
 /**
@@ -16,6 +17,8 @@ public interface EmployeeDAO {
     
     // Employee eklemek için 
     public Employee insertEmployee(int id,String name,String surname,int salary);
+    
+     public Employee4 insertEmployee2(Long id,String name,String surname,String mobilephone);
     // Employee dondurmek için
     public List<Employee> listEmployee();
     // Employee bulmak için metod 

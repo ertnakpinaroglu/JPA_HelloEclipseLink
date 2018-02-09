@@ -2,6 +2,7 @@
 package _01.hello.eclipselink.dao;
 
 import _01.hello.eclipselink.model.Employee;
+import _02.field.access.model.Employee4;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -56,6 +57,16 @@ public class EmployeeDaoImpl implements EmployeeDAO {
         entityManager.getTransaction().commit();
         return emp;
     }
+    @Override
+    public Employee4 insertEmployee2(Long id, String name, String surname, String mobilephone) {
+        Employee4 eklenecekEmp = new Employee4(id, name, surname, mobilephone);
+       entityManager.getTransaction().begin();
+       entityManager.persist(eklenecekEmp);
+       entityManager.getTransaction().commit();
+       return eklenecekEmp;
+    }
+
+    
     
     
     
